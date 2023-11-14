@@ -1,0 +1,19 @@
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.footer-link {
+  color: var(--text-color);
+}
+
+.footer-link:hover,
+.footer-link:active,
+.footer-link:focus {
+  color: var(--secondary-color);
+}
+
+.footer-link svg {
+  width: 2em;
+  height: 2em;
+}
