@@ -8,9 +8,9 @@ const Navigation = ({ currentPage, setPage }) => {
   return (
     <>
       <Link
-        className={`navbar-brand ${currentPage === "/" ? "active" : ""}`}
-        to="/"
-        onClick={() => handleLinkClick("/")}
+        className={`navbar-brand ${currentPage === "/about" ? "active" : ""}`}
+        to="/about"
+        onClick={() => handleLinkClick("/about")}
       >
         Daniel Merkin
       </Link>
@@ -30,15 +30,7 @@ const Navigation = ({ currentPage, setPage }) => {
         id="navbarNav"
       >
         <ul className="navbar-nav">
-          <li className={`nav-item ${currentPage === "/" ? "active" : ""}`}>
-            <Link
-              className="nav-link"
-              to="/"
-              onClick={() => handleLinkClick("/")}
-            >
-              Home
-            </Link>
-          </li>
+
           <li
             className={`nav-item ${currentPage === "/about" ? "active" : ""}`}
           >
