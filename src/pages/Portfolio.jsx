@@ -3,7 +3,7 @@ import projects from '../utils/projects'
 
 export default function Portfolio() {
   return (
-    <div className="container mt-5">
+    <div className="container my-5">
       <h1 className="text-center">Recent Projects</h1>
       <div className="card-container">
         {projects.map((project, index) => (

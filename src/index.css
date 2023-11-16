@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 :root {
   --primary-color: #1e2327;
   --secondary-color: #dd5f3d;
   --third-color: #81b29a;
   --text-color: #f3e9d2;
   --background-color: #2a363b;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -21,6 +27,8 @@ main {
 .fade-in {
   animation: fadeIn 1s ease-in-out;
 }
+
+
 
 @keyframes fadeIn {
   0% {

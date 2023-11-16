@@ -21,7 +21,6 @@ const About = () => {
                 </Link>{" "}
                 section or get in touch via the{" "}
                 <Link to="/contact" className="text-primary">
-                  
                   Contact
                 </Link>{" "}
                 page.
