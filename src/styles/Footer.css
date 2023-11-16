@@ -1,19 +1,26 @@
-footer {
+.footer {
+  width: 100%;
+  min-height: 50px;
   background-color: var(--primary-color);
   color: var(--text-color);
+  text-align: center;
+  padding: 1em;
+  margin-top: auto;
 }
 
-.footer-link {
+.footer-link,
+.footer-svg {
   color: var(--text-color);
+  transition: color 0.5s ease-in-out;
 }
 
 .footer-link:hover,
-.footer-link:active,
-.footer-link:focus {
+.footer-svg:hover {
   color: var(--secondary-color);
 }
 
-.footer-link svg {
-  width: 2em;
-  height: 2em;
+.footer-link svg,
+.footer-svg svg {
+  width: 3em;
+  height: 3em;
 }
