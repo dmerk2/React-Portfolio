@@ -8,7 +8,11 @@
   --background-color: #2a363b;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -16,24 +20,34 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #f8f9fa;
-  min-height: 100vh;
   margin: 0;
 }
 
 main {
   flex: 1;
+  min-height: 87vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark-bg {
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  height: 20vh;
 }
 
 .fade-in {
   animation: fadeIn 1s ease-in-out;
 }
 
-
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

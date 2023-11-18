@@ -1,5 +1,4 @@
 import isValidEmail from "../utils/helpers";
-
 const Contact = () => {
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -12,59 +11,67 @@ const Contact = () => {
     // Validate email
     if (!isValidEmail(email)) {
       // Handle invalid email
-      alert("Please enter valid email address");
+      alert("Please enter a valid email address");
       return;
     }
 
-    // Process the form data (you can add your logic here)
-    console.log("Form submitted:", { name, email, message });
+    // Recipient's email address
+    const recipientEmail = "dan.merkin@gmail.com";
+
+    // Generate the mailto link with recipient's email, sender's email, subject, and body
+    const mailtoLink = `mailto:${recipientEmail}?subject=Message from ${name}&body=${message}%0D%0A%0D%0ASender's Email: ${email}`;
+
+    // Open the user's email client with the pre-filled email
+    window.location.href = mailtoLink;
   };
 
   return (
-    <div className="container mt-5">
-      <h1 className="mb-4 text-center">Contact Me</h1>
-      <form onSubmit={handleFormSubmit}>
-        <div className="mb-3">
-          <label htmlFor="name" className="form-label">
-            Name:
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="name"
-            placeholder="Your Name"
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email:
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            placeholder="Your Email"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="message" className="form-label">
-            Message:
-          </label>
-          <textarea
-            className="form-control"
-            id="message"
-            rows="4"
-            placeholder="Your Message"
-            required
-          ></textarea>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
-    </div>
+    <>
+      <div className="container mt-5 contact-container">
+        <h1 className="mb-4 text-center">Contact Me</h1>
+        <form onSubmit={handleFormSubmit}>
+          <div className="mb-3">
+            <label htmlFor="name" className="form-label">
+              Name:
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">
+              Email:
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              id="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="message" className="form-label">
+              Message:
+            </label>
+            <textarea
+              className="form-control"
+              id="message"
+              rows="4"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+        </form>
+      </div>
+    </>
   );
 };
 

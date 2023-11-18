@@ -5,7 +5,7 @@ import "../styles/About.css";
 const About = () => {
   return (
     <>
-      <div className="dark-bg p-5">
+      <div className="dark-bg p-5 w-100">
         <div className="row">
           <div className="col-md-12">
             <div className="text-center">

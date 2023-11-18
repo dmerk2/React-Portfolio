@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 const Navigation = ({ currentPage, setPage }) => {
   const handleLinkClick = (path) => {
     setPage(path);
@@ -8,9 +9,9 @@ const Navigation = ({ currentPage, setPage }) => {
   return (
     <>
       <Link
-        className={`navbar-brand ${currentPage === "/about" ? "active" : ""}`}
-        to="/about"
-        onClick={() => handleLinkClick("/about")}
+        className={`navbar-brand`}
+        to="/"
+        onClick={() => handleLinkClick("/")}
       >
         Daniel Merkin
       </Link>
@@ -30,9 +31,10 @@ const Navigation = ({ currentPage, setPage }) => {
         id="navbarNav"
       >
         <ul className="navbar-nav">
-
           <li
-            className={`nav-item ${currentPage === "/about" ? "active" : ""}`}
+            className={`nav-item ${
+              currentPage === "/about" ? "active" : ""
+            } && ${currentPage === "/" ? "active" : ""}`}
           >
             <Link
               className="nav-link"
