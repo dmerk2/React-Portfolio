@@ -14,7 +14,7 @@ const About = () => {
                 Hi, I am Daniel Merkin, a passionate web developer with
                 expertise in building modern and responsive web applications.
               </p>
-              <p className="lead">
+              {/* <p className="lead">
                 Explore my work in the{" "}
                 <Link to="/portfolio" className="text-primary">
                   Portfolio
@@ -24,7 +24,7 @@ const About = () => {
                   Contact
                 </Link>{" "}
                 page.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
